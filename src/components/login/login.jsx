@@ -14,7 +14,7 @@ const Login = () => {
             // const response = await fetch("https://blog-server-2zb0.onrender.com/login", {
             //await fetch("https://blog-server-2zb0.onrender.com/login", {
 
-            await fetch("hhttps://full-stack-server1.onrender.com/login", {
+            await fetch("https://full-stack-server1.onrender.com/login", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(LoginData)
@@ -63,6 +63,7 @@ const Login = () => {
             <div>
                 <button onClick={() => login()}>Login</button>
             </div>
+            <div>Not have an Account click on <a href="/register" style={{"color": "green"}}>Register</a></div>
         </div>
     )
 }

@@ -33,6 +33,7 @@ const Register = ()=> {
         <div>
             <section>
             <h2>Register</h2>
+
             <input type="text" 
                    placeholder="userName"
                    onChange={(e)=> setRegisterData({...registerData , userName:e.target.value})} /> <br />

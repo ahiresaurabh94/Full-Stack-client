@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { useNavigate, useRouteLoaderData } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 
 
 const Activity = ()=> {
@@ -71,7 +70,7 @@ const Activity = ()=> {
 
     function reset(id){
         clearInterval(stopWatch)
-        seconds=0
+         seconds=0
         const token = localStorage.getItem('token')
 
         const taken_time = `${hh.innerText}:${mm.innerText}:${ss.innerText}`
@@ -87,14 +86,20 @@ const Activity = ()=> {
         })
         .then((response) => {
             if (response.status === 403 || response.status === 401) return navigate("/activity");
-            
+            window.location.reload()
             });
 
-        window.location.reload()
+        
+
     }
 
     return (
         <div>
+            <div>
+            <span className="home_pic"><img src="/avatar.png" alt="Profile" width="40px"/></span>
+            <div>{localStorage.getItem("name")}</div>
+            </div>
+
             <button onClick={()=>{navigate('/setActivity')}}>Add new activity</button>
             <table>
                 <thead>
