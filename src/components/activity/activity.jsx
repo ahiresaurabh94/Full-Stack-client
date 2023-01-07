@@ -88,9 +88,6 @@ const Activity = ()=> {
             if (response.status === 403 || response.status === 401) return navigate("/activity");
             window.location.reload()
             });
-
-        
-
     }
 
     return (
