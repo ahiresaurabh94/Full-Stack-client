@@ -63,6 +63,7 @@ const Login = () => {
             <div>
                 <button onClick={() => login()}>Login</button>
             </div>
+            <div>Not have an Account click on <a href="/register" style={{"color": "green"}}>Register</a></div>
         </div>
     )
 }
